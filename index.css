@@ -1,3 +1,118 @@
-h1 {
-    color: red;
+body {
+    margin: 0;
+    padding: 0;
+}
+
+main {
+    margin-top: 180px;
+}
+
+/****** Navigation Styles ******/
+nav {
+    width: 100%;
+    top: 0;
+    position: fixed;
+    z-index: 1;
+    background: lightgray;
+}
+
+#navMenu{
+    padding-top: 10px;
+    clear:both;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    list-style: none;
+    overflow: hidden;
+    max-height: 0;
+    background: lightgray;
+    transition: max-height .6s ease;
+}
+
+.menuItem{
+    display: block;
+    text-align: center;
+    text-decoration: none;
+    border-radius: 10px;
+    color: white;
+    padding: 20px;
+    font-size: 30px;
+}
+
+.menuItem:hover {
+    background: black;
+}
+
+#navCheck {
+    display: none;
+}
+
+#navBtn {
+    float: right;
+    margin-top: 30px;
+    padding: 20px 20px;
+    cursor: pointer;
+}
+
+.menuBar, .menuBar:before, .menuBar:after {
+    position: absolute;
+    display: block;
+    content: "";
+    background: black;
+    height: 8px;
+    width: 60px;
+    border-radius: 8px;
+    transition: all .6s ease;
+}
+
+.menuBar {
+    position: relative;
+    transition: background .6s ease;
+}
+
+.menuBar:before {
+    top: -18px;
+}
+
+.menuBar:after {
+    top: 18px;
+}
+
+#navCheck:checked ~ #navMenu {
+    max-height: 240px;
+}
+
+#navCheck:checked ~ #navBtn .menuBar:before {
+    transform: rotate(45deg);
+    top: 0;
+}
+
+#navCheck:checked ~ #navBtn .menuBar:after {
+    transform: rotate(-45deg);
+    top: 0;
+}
+
+#navCheck:checked ~ #navBtn .menuBar {
+    background: transparent;
+}
+
+/****** End Navigation Styles ******/
+
+
+/******* Media Queries Navigation ******/
+@media screen and (min-width: 501px) {
+    
+    #navBtn {
+        display: none;
+    }
+
+    #navMenu {
+        display: flex;
+        flex-direction: row;
+        margin-right: 10px;
+        align-items: flex-end;
+        justify-content: flex-end;
+        max-height: none;
+        height: auto;
+    }
 }
