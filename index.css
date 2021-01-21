@@ -6,23 +6,17 @@ body {
 }
 
 main {
-    margin-top: 0;
-    padding-bottom: 40px;
     display: flex;
     flex-direction: column;
-    background: rgb(2, 2, 100);
     align-items: flex-end;
+    padding-top: 60px;
+    padding-bottom: 40px;
+    background: rgb(2, 2, 100);
 }
 
 article {
     width: 60%;
     padding: 0;
-}
-
-#nameCont {
-    margin-top: 50px;
-    display: flex;
-    justify-content: flex-end;
 }
 /****** End Container Styles ******/
 
@@ -147,6 +141,10 @@ h2 {
 p {
     font-size: 20px;
 }
+
+li {
+    line-height: 1.6;
+}
 /****** End Font Styles ******/
 
 /******* Media Queries ******/
@@ -156,11 +154,7 @@ p {
     #navBtn {
         display: none;
     }
-}
 
-/****** Tablet ******/
-@media screen and (min-width: 501px) and (max-width: 800px) {
-    
     .menuItem {
         font-size: 24px;
         padding: 15px;
@@ -175,27 +169,48 @@ p {
         max-height: none;
         height: auto;
     }
+    article {
+        padding: 0 10px 40px 230px;
+        width: 60%;
+    }
+
+    main {
+        display: block;
+    }
+
+    h2 {
+        margin-left: -20px;
+    }
+}
+
+/****** Tablet ******/
+@media screen and (min-width: 501px) and (max-width: 800px) {
+    #profileImg {
+        height: 30em;
+    }
 }
 
 /****** Desktop ******/
 @media screen and (min-width: 801px) {
-    h1 {
-        width: 80%;
-        background: green;
-    }
-
-    .menuItem {
-        font-size: 24px;
-        padding: 15px;
-    }
-
     #navMenu {
-        display: flex;
-        flex-direction: row;
-        margin-right: 10px;
         justify-content: center;
-        max-height: none;
-        height: auto;
+    }
+
+    #profileImg {
+        height: 30em;
+    }
+
+    main {
+        padding-top: 150px;
+    }
+
+    p {
+        line-height: 2;
+    }
+
+    article {
+        padding-top: 40px;
+        width: 50%;
     }
 }
 
