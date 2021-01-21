@@ -1,12 +1,30 @@
+/****** Container Styles ******/
 body {
     margin: 0;
     padding: 0;
+    color: lightgray;
 }
 
 main {
-    padding: 20px;
-    margin-top: 100px;
+    margin-top: 0;
+    padding-bottom: 40px;
+    display: flex;
+    flex-direction: column;
+    background: rgb(2, 2, 100);
+    align-items: flex-end;
 }
+
+article {
+    width: 60%;
+    padding: 0;
+}
+
+#nameCont {
+    margin-top: 50px;
+    display: flex;
+    justify-content: flex-end;
+}
+/****** End Container Styles ******/
 
 /****** Navigation Styles ******/
 nav {
@@ -14,7 +32,7 @@ nav {
     top: 0;
     position: fixed;
     z-index: 1;
-    background: lightgray;
+    background: rgb(40, 40, 40);
 }
 
 #navMenu{
@@ -27,7 +45,7 @@ nav {
     list-style: none;
     overflow: hidden;
     max-height: 0;
-    background: lightgray;
+    background: rgb(40, 40, 40);
     transition: max-height .6s ease;
 }
 
@@ -37,12 +55,13 @@ nav {
     text-decoration: none;
     border-radius: 10px;
     color: white;
-    padding: 20px;
-    font-size: 30px;
+    padding: 15px;
+    font-size: 20px;
 }
 
 .menuItem:hover {
-    background: black;
+    background: lightgray;
+    color: black;
 }
 
 #navCheck {
@@ -51,8 +70,8 @@ nav {
 
 #navBtn {
     float: right;
-    margin-top: 30px;
-    padding: 20px 20px;
+    margin-top: 20px;
+    padding: 15px 15px;
     cursor: pointer;
 }
 
@@ -60,9 +79,9 @@ nav {
     position: absolute;
     display: block;
     content: "";
-    background: black;
-    height: 8px;
-    width: 60px;
+    background: lightgray;
+    height: 5px;
+    width: 40px;
     border-radius: 8px;
     transition: all .6s ease;
 }
@@ -73,15 +92,15 @@ nav {
 }
 
 .menuBar:before {
-    top: -18px;
+    top: -14px;
 }
 
 .menuBar:after {
-    top: 18px;
+    top: 14px;
 }
 
 #navCheck:checked ~ #navMenu {
-    max-height: 240px;
+    max-height: 200px;
 }
 
 #navCheck:checked ~ #navBtn .menuBar:before {
@@ -98,18 +117,52 @@ nav {
     background: transparent;
 }
 
+
+
 /****** End Navigation Styles ******/
 
+/****** Image Styles *******/
 
-/******* Media Queries Navigation ******/
+#profileImg {
+    margin-top: 30px;
+    height: 20em;
+    position: fixed;
+    left: 0;
+    bottom: 0;
+}
+
+/****** End Image Styles ******/
+
+/****** Font Styles ******/
+h1 {
+    font-size: 64px;
+    text-align: center;
+}
+
+h2 {
+    font-size: 32px;
+    margin-left: -50px;
+}
+
+p {
+    font-size: 20px;
+}
+/****** End Font Styles ******/
+
+/******* Media Queries ******/
+
+/****** Not Mobile ******/
 @media screen and (min-width: 501px) {
-    
     #navBtn {
         display: none;
     }
+}
 
+/****** Tablet ******/
+@media screen and (min-width: 501px) and (max-width: 800px) {
+    
     .menuItem {
-        font-size: 16px;
+        font-size: 24px;
         padding: 15px;
     }
 
@@ -123,3 +176,27 @@ nav {
         height: auto;
     }
 }
+
+/****** Desktop ******/
+@media screen and (min-width: 801px) {
+    h1 {
+        width: 80%;
+        background: green;
+    }
+
+    .menuItem {
+        font-size: 24px;
+        padding: 15px;
+    }
+
+    #navMenu {
+        display: flex;
+        flex-direction: row;
+        margin-right: 10px;
+        justify-content: center;
+        max-height: none;
+        height: auto;
+    }
+}
+
+/****** End Media Queries ******/
