@@ -5,10 +5,13 @@ body {
     color: lightgray;
 }
 
+header{
+    position: fixed;
+}
+
 main {
     display: flex;
     flex-direction: column;
-    align-items: flex-end;
     padding-top: 60px;
     padding-bottom: 40px;
     background: rgb(2, 2, 100);
@@ -17,12 +20,22 @@ main {
 article {
     width: 60%;
     padding: 0;
+    margin-left: 140px;
+}
+
+.galleryCont {
+    display: flex;
+    padding: 10px;
+    max-width: 80%;
+    flex-direction: column;
+    margin: auto;
 }
 /****** End Container Styles ******/
 
 /****** Navigation Styles ******/
 nav {
     width: 100%;
+    height: 100px;
     top: 0;
     position: fixed;
     z-index: 1;
@@ -123,6 +136,24 @@ nav {
     position: fixed;
     left: 0;
     bottom: 0;
+    z-index: 2;
+}
+
+#logo {
+    z-index: 2;
+    height: 90px;
+    position: fixed;
+    top: 10px;
+    left: 10px;
+}
+
+.galleryImg {
+    margin: auto;
+    width: auto;
+    height: auto;
+    max-width: 300px;
+    max-height: 300px;
+    padding-bottom: 30px;
 }
 
 /****** End Image Styles ******/
@@ -181,6 +212,17 @@ li {
     h2 {
         margin-left: -20px;
     }
+
+    .galleryCont {
+        max-width: none;
+        padding: 20px;
+        flex-direction: row;
+        flex-wrap: wrap;
+    }
+
+    .galleryImg {
+        padding: 10px;
+    }
 }
 
 /****** Tablet ******/
@@ -211,6 +253,14 @@ li {
     article {
         padding-top: 40px;
         width: 50%;
+    }
+}
+
+/****** Large Laptops ******/
+@media screen and (min-width: 1100px) {
+    
+    article {
+        padding-bottom: 300px;
     }
 }
 
