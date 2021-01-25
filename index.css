@@ -18,9 +18,8 @@ main {
 }
 
 article {
-    width: 60%;
-    padding: 0;
-    margin-left: 140px;
+    width: auto;
+    padding: 0 20px 40px 48%;
 }
 
 .galleryCont {
@@ -40,6 +39,7 @@ nav {
     position: fixed;
     z-index: 1;
     background: rgb(40, 40, 40);
+    box-shadow: 0 1px 20px black ;
 }
 
 #navMenu{
@@ -178,6 +178,47 @@ li {
 }
 /****** End Font Styles ******/
 
+/****** Form Styles ******/
+form {
+    display: flex;
+    flex-direction: column;
+    margin: auto;
+    background: lightgray;
+    max-width: 80%;
+    padding: 20px;
+    border-radius: 10px;
+    color: black;
+}
+
+input {
+    max-width: 150px;
+    padding: 5px;
+    margin: auto;
+}
+
+label {
+    margin: 5px;
+}
+
+form h2 {
+    margin: 30px auto;
+}
+
+input[type = "textarea"] {
+    min-width: 200px;
+    overflow: scroll;
+}
+
+input[type = "submit"] {
+    background: green;
+    color: white;
+    font-size: 18px;
+    padding: 10px;
+    border-radius: 10px;
+    cursor: pointer;
+    box-shadow: 0 5px 5px black ;
+}
+
 /******* Media Queries ******/
 
 /****** Not Mobile ******/
@@ -201,7 +242,7 @@ li {
         height: auto;
     }
     article {
-        padding: 0 10px 40px 230px;
+        padding: 0 10px 40px 40%;
         width: 60%;
     }
 
@@ -222,6 +263,14 @@ li {
 
     .galleryImg {
         padding: 10px;
+    }
+
+    form {
+        max-width: 50%;
+    }
+
+    label {
+        margin-left: 20%;
     }
 }
 
@@ -253,6 +302,10 @@ li {
     article {
         padding-top: 40px;
         width: 50%;
+    }
+
+    label {
+        margin-left: 30%;
     }
 }
 
